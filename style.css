@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body, html {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  height: 100%;
+}
+
+.container {
+  background-color: var(--dark-cyan);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-ballon-top {
+  position: absolute;
+  top: -50%;
+  right: 50%;
+  z-index: 9;
+}
+
+.bg-ballon-bottom {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  z-index: 9;
+}
+
+.content {
+  height: 100%; /* alinhar flex ao centro */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  z-index: 10;
+  width: 300px;          /* 325w 375h */ 
+  height: 355px;
+
+  border-radius: 12px;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-profile img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+}
+
+h2.name-profile {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--dark-blue);
+
+  padding-top: 1rem;
+}
+
+.age-profile {
+  font-weight: 400;
+  color: var(--dark-grayish);
+}
+
+p.city-profile {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  text-transform: capitalize;
+
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+} 
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #E9E9E9;
+}
+
+.social-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-social-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.social-description {
+  font-size: 10px;
+  text-transform: capitalize;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
